@@ -1,0 +1,18 @@
+/////////////////////////////////////////////////////////
+////////////How to download LibC////////////
+/////////////////////////////////////////////////////////
+
+1) Go onto github
+2) Clone the git repository in an accessible folder
+3) Double click the install file, which will tell you which
+software to install before installing libconfig.
+4) Go into directory "libconfig-1.7.2"
+5) Enter "./configure --prefix=$HOME" (make sure that there's a configuration file in that directory).
+6) Enter "make"
+7) Enter "make install"
+
+NOTE: You may need to use sudo to install them.
+
+This video may be useful:
+https://www.youtube.com/watch?v=imw7sMKJyVo
+

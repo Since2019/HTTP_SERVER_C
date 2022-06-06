@@ -1,0 +1,40 @@
+https://stackoverflow.com/questions/60127743/changes-not-showing-in-field-in-ncurses
+
+
+How to write to configurations
+
+https://github.com/hyperrealm/libconfig/blob/master/examples/c/example3.c
+
+Libconfig Manual
+
+https://www.hyperrealm.com/libconfig/libconfig_manual.html
+
+
+Main reference for forms
+
+https://gist.github.com/alan-mushi/c8a6f34d1df18574f643
+
+Other reference for forms.
+
+https://tldp.org/HOWTO/NCURSES-Programming-HOWTO/forms.html
+
+How to make windows
+
+https://linux.die.net/man/3/derwin
+
+How to control curser.
+
+https://www.mkssoftware.com/docs/man3/curs_move.3.asp
+
+How field opts work
+
+https://linux.die.net/man/3/field_opts
+
+How the form driver works
+
+https://linux.die.net/man/3/form_driver
+
+Ncurses guide
+
+http://www.cems.uwe.ac.uk/~irjohnso/courses/coursenotes/ufs001/NCURSES-Programming-HOWTO.pdf
+

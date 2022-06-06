@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "http_server": "c",
+        "http_handler2": "c",
+        "limits": "c"
+    }
+}

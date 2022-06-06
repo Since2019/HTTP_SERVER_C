@@ -1,0 +1,2 @@
+Idea board for dynamic ncurses form.
+

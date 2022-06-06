@@ -1,0 +1,143 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+ no time accumulated
+
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+  0.00      0.00     0.00     1340     0.00     0.00  process_option_line
+  0.00      0.00     0.00     1340     0.00     0.00  to_upper
+  0.00      0.00     0.00      436     0.00     0.00  write_to_logfile
+  0.00      0.00     0.00      312     0.00     0.00  rio_writen
+  0.00      0.00     0.00      279     0.00     0.00  header_parse
+  0.00      0.00     0.00      156     0.00     0.00  Mmap
+  0.00      0.00     0.00      156     0.00     0.00  Munmap
+  0.00      0.00     0.00      156     0.00     0.00  dequeue
+  0.00      0.00     0.00      156     0.00     0.00  enqueue
+  0.00      0.00     0.00      156     0.00     0.00  get_filetype
+  0.00      0.00     0.00      156     0.00     0.00  parse_uri
+  0.00      0.00     0.00      156     0.00     0.00  prepend
+  0.00      0.00     0.00      156     0.00     0.00  process_header_end
+  0.00      0.00     0.00      156     0.00     0.00  process_logline
+  0.00      0.00     0.00      156     0.00     0.00  process_requests
+  0.00      0.00     0.00      156     0.00     0.00  serve_static
+  0.00      0.00     0.00      156     0.00     0.00  thread_function
+  0.00      0.00     0.00        1     0.00     0.00  cleanUp
+  0.00      0.00     0.00        1     0.00     0.00  init_logfile
+  0.00      0.00     0.00        1     0.00     0.00  readConfiguration
+  0.00      0.00     0.00        1     0.00     0.00  readConfigurationFromCommandLine
+  0.00      0.00     0.00        1     0.00     0.00  readConfigurationFromDefaults
+  0.00      0.00     0.00        1     0.00     0.00  readConfigurationFromEnvironment
+  0.00      0.00     0.00        1     0.00     0.00  readConfigurationFromFile
+
+			Call graph
+
+
+granularity: each sample hit covers 2 byte(s) no time propagated
+
+index % time    self  children    called     name
+                0.00    0.00    1340/1340        header_parse [5]
+[1]      0.0    0.00    0.00    1340         process_option_line [1]
+                0.00    0.00    1340/1340        to_upper [2]
+-----------------------------------------------
+                0.00    0.00    1340/1340        process_option_line [1]
+[2]      0.0    0.00    0.00    1340         to_upper [2]
+-----------------------------------------------
+                0.00    0.00       1/436         main [35]
+                0.00    0.00     156/436         process_logline [14]
+                0.00    0.00     279/436         process_requests [15]
+[3]      0.0    0.00    0.00     436         write_to_logfile [3]
+-----------------------------------------------
+                0.00    0.00     312/312         serve_static [16]
+[4]      0.0    0.00    0.00     312         rio_writen [4]
+-----------------------------------------------
+                0.00    0.00     279/279         process_requests [15]
+[5]      0.0    0.00    0.00     279         header_parse [5]
+                0.00    0.00    1340/1340        process_option_line [1]
+                0.00    0.00     156/156         process_logline [14]
+                0.00    0.00     156/156         process_header_end [13]
+-----------------------------------------------
+                0.00    0.00     156/156         serve_static [16]
+[6]      0.0    0.00    0.00     156         Mmap [6]
+-----------------------------------------------
+                0.00    0.00     156/156         serve_static [16]
+[7]      0.0    0.00    0.00     156         Munmap [7]
+-----------------------------------------------
+                0.00    0.00     156/156         thread_function [17]
+[8]      0.0    0.00    0.00     156         dequeue [8]
+-----------------------------------------------
+                0.00    0.00     156/156         main [35]
+[9]      0.0    0.00    0.00     156         enqueue [9]
+-----------------------------------------------
+                0.00    0.00     156/156         serve_static [16]
+[10]     0.0    0.00    0.00     156         get_filetype [10]
+-----------------------------------------------
+                0.00    0.00     156/156         process_header_end [13]
+[11]     0.0    0.00    0.00     156         parse_uri [11]
+                0.00    0.00     156/156         prepend [12]
+-----------------------------------------------
+                0.00    0.00     156/156         parse_uri [11]
+[12]     0.0    0.00    0.00     156         prepend [12]
+-----------------------------------------------
+                0.00    0.00     156/156         header_parse [5]
+[13]     0.0    0.00    0.00     156         process_header_end [13]
+                0.00    0.00     156/156         parse_uri [11]
+                0.00    0.00     156/156         serve_static [16]
+-----------------------------------------------
+                0.00    0.00     156/156         header_parse [5]
+[14]     0.0    0.00    0.00     156         process_logline [14]
+                0.00    0.00     156/436         write_to_logfile [3]
+-----------------------------------------------
+                0.00    0.00     156/156         thread_function [17]
+[15]     0.0    0.00    0.00     156         process_requests [15]
+                0.00    0.00     279/436         write_to_logfile [3]
+                0.00    0.00     279/279         header_parse [5]
+-----------------------------------------------
+                0.00    0.00     156/156         process_header_end [13]
+[16]     0.0    0.00    0.00     156         serve_static [16]
+                0.00    0.00     312/312         rio_writen [4]
+                0.00    0.00     156/156         get_filetype [10]
+                0.00    0.00     156/156         Mmap [6]
+                0.00    0.00     156/156         Munmap [7]
+-----------------------------------------------
+                0.00    0.00     156/156         main [35]
+[17]     0.0    0.00    0.00     156         thread_function [17]
+                0.00    0.00     156/156         dequeue [8]
+                0.00    0.00     156/156         process_requests [15]
+-----------------------------------------------
+                0.00    0.00       1/1           INThandler [25]
+[18]     0.0    0.00    0.00       1         cleanUp [18]
+-----------------------------------------------
+                0.00    0.00       1/1           main [35]
+[19]     0.0    0.00    0.00       1         init_logfile [19]
+-----------------------------------------------
+                0.00    0.00       1/1           main [35]
+[20]     0.0    0.00    0.00       1         readConfiguration [20]
+                0.00    0.00       1/1           readConfigurationFromFile [24]
+                0.00    0.00       1/1           readConfigurationFromCommandLine [21]
+                0.00    0.00       1/1           readConfigurationFromDefaults [22]
+                0.00    0.00       1/1           readConfigurationFromEnvironment [23]
+-----------------------------------------------
+                0.00    0.00       1/1           readConfiguration [20]
+[21]     0.0    0.00    0.00       1         readConfigurationFromCommandLine [21]
+-----------------------------------------------
+                0.00    0.00       1/1           readConfiguration [20]
+[22]     0.0    0.00    0.00       1         readConfigurationFromDefaults [22]
+-----------------------------------------------
+                0.00    0.00       1/1           readConfiguration [20]
+[23]     0.0    0.00    0.00       1         readConfigurationFromEnvironment [23]
+-----------------------------------------------
+                0.00    0.00       1/1           readConfiguration [20]
+[24]     0.0    0.00    0.00       1         readConfigurationFromFile [24]
+-----------------------------------------------
+
+Index by function name
+
+   [6] Mmap                   [11] parse_uri              [22] readConfigurationFromDefaults
+   [7] Munmap                 [12] prepend                [23] readConfigurationFromEnvironment
+  [18] cleanUp                [13] process_header_end     [24] readConfigurationFromFile
+   [8] dequeue                [14] process_logline         [4] rio_writen
+   [9] enqueue                 [1] process_option_line    [16] serve_static
+  [10] get_filetype           [15] process_requests       [17] thread_function
+   [5] header_parse           [20] readConfiguration       [2] to_upper
+  [19] init_logfile           [21] readConfigurationFromCommandLine [3] write_to_logfile

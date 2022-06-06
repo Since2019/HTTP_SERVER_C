@@ -1,0 +1,14 @@
+server
+client
+grammar.*
+libconfig.*
+parsectx.h
+scanctx.*
+scanner.*
+strbuf.*
+strvec.*
+util.*
+wincompat.*
+./JudaoTest
+./build
+build

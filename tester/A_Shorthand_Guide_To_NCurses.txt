@@ -1,0 +1,39 @@
+////////////////////////////////////////////////////////////////////////
+////////////What is Ncurses (new curses)?////////////
+////////////////////////////////////////////////////////////////////////
+A programming library that provides API that lets the programmer make text-based UI,
+independant from the terminal. In short, it allows programmers to develop applications that run under
+the terminal, with a graphical user interface (with padding, colour, function-key mapping, etc.).
+
+///////////////////////////////////////////////////////////
+////////////How do I get Ncurses?////////////
+//////////////////////////////////////////////////////////
+
+Just go into your terminal and type in the following command:
+
+"sudo apt-get install libncurses5-dev libncursesw5-dev"
+
+////////////////////////////////////////////////////////////////////////
+////////////How to compile using Ncurses ////////////
+///////////////////////////////////////////////////////////////////////
+
+Use the following convention to compile your program:
+
+gcc -std=c11 -Wpedantic -Wall -Wextra <YOUR_PROGRAM_NAME_HERE> -lncurses
+
+////////////////////////////////////////////////////////////////////////
+////////////Common Commands and Usages/////////
+///////////////////////////////////////////////////////////////////////
+
+-initscr(): initializes the terminal type and the implementation data structures.
+
+Sources:
+
+Gives a general overview of Ncurses, plus some handy resources at the end:
+
+whoishostingthis.com/resources/ncurses/
+
+Instructions on how to install ncurses:
+
+https://www.cyberciti.biz/faq/linux-install-ncurses-library-headers-on-debian-ubuntu-centos-fedora/
+

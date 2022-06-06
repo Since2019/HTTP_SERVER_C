@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>D&nbsp;Jager</title>
+    <meta charset="utf-8"/>
+   
+    <style>
+     
+    </style>
+   
+  </head>
+  
+  <body>
+
+
+    <script>
+       
+      //create the <head> in the html.
+      function createHead() {
+        var head = document.createElement("head");
+        head.setAttribute("id","head");
+        document.head=head;
+       
+      }
+      createHead();
+      
+      function addFont(){
+       var style = document.createElement("style");
+       style.type = "text/css";
+       style.innerHTML="@import url('https://fonts.googleapis.com/css?family=Aclonica&display=swap'); @import url('https://fonts.googleapis.com/css?family=Aladin&display=swap'); @import url('https://fonts.googleapis.com/css?family=Copse&display=swap');</style>";
+  style.id="addStyle";
+        
+        
+  document.getElementsByTagName("head").item(0).appendChild(style);
+      }addFont();
+      
+      
+      //create the <head> in the html.
+      function createAll(){
+        
+        // create <body> elements
+        var body = document.createElement("body");
+        document.body=body;
+        
+        // create the Head of the card
+        function createHeader(){
+          
+          var cardHead = document.createElement("div"); // a div that contains the whole cardHead
+          body.appendChild(cardHead);                   // append() is used to put the cardHead into the body
+          cardHead.style.fontFamily = "'Aclonica', sans-serif";
+          cardHead.style.color="white";
+          cardHead.style.display="inline-flex";
+          cardHead.style.background=" repeating-linear-gradient(-45deg, transparent, transparent 25px, rgba(000,000,255, 1) 25px, rgba(255,255,255, 1) 50px)";
+          cardHead.style.backgroundColor="rgba(000,000,150, 1)";
+          
+          function headerPicture(){
+            var R6Logo = document.createElement("img");
+            cardHead.appendChild(R6Logo);
+            R6Logo.src="img/r6.png";
+            R6Logo.style.width="80px";
+            R6Logo.style.float="right";
+            R6Logo.style.marginRight="15px";
+            R6Logo.style.marginTop="25px";
+            R6Logo.style.clipPath="circle()";
+            
+            var UplayLogo = document.createElement("img");
+            cardHead.appendChild(UplayLogo);
+            UplayLogo.src="img/ubisoft.png";
+            UplayLogo.style.width="80px";
+            UplayLogo.style.float="left";
+            UplayLogo.style.marginLeft="5px";
+            UplayLogo.style.marginTop="65px";
+          }
+          headerPicture();
+          
+          
+          
+          
+          function createCardName(){
+            var cardName = document.createElement("carName");
+            cardHead.appendChild(cardName);
+            cardName.style.marginTop="100px";
+            cardName.innerHTML="Master Jager<br/>"
+            cardHead.style.display="block";
+            cardHead.style.textAlign="center";
+            cardHead.style.textShadow="1px 3px 2px #000000"
+//            cardHead.style.backgroundColor="blue";
+            cardHead.style.display="block"
+            cardHead.style.width="500px";
+            cardHead.style.height="150px";
+            cardHead.style.clear="both";
+            var roundPic1 = document.createElement("div");
+            //roundPic1.setAttribute("id,round1");
+//            cardHead.style.backgroundImage="url('https://www.transparenttextures.com/patterns/arabesque.png')";
+            cardHead.style.fontSize="190%";
+          }createCardName();
+          
+          function createCardAttribute(){
+            var cardAttribute = document.createElement("p");
+            cardHead.appendChild(cardAttribute);
+            cardAttribute.style.backgroundColor="rgb(255,254,234)"
+            cardAttribute.style.color="black";
+            cardAttribute.style.fontFamily="'Aclonica', sans-serif";
+            cardAttribute.innerText="DEFENDER";
+            cardAttribute.style.display="inline-block";
+            cardAttribute.style.width="200px"
+          }
+          createCardAttribute()
+          
+        }
+        createHeader();
+        
+        //a picture of jager
+        function jager() {
+        var jager = document.createElement("img");
+        jager.src="img/r6-operator-jager.webp";
+        jager.style.width="180px";
+        body.appendChild(jager);
+        jager.style.position="absolute";
+        jager.style.top="150px";
+        jager.style.left="320px";
+        jager.style.clear="right";
+        jager.style.padding="0px";
+        jager.style.margin="0px";
+        jager.style.filter="blur(2px)";
+//        jager.style.clipPath="circle()";
+        }
+        jager();
+        
+        
+        
+
+        
+        //make the background looks more like a canvas
+        body.style.backgroundImage="url('https://www.transparenttextures.com/patterns/45-degree-fabric-dark.png')";
+        body.style.backgroundColor="rgb(255,254,234)";
+        
+        
+       
+        
+        
+        
+        
+        //create the left div
+        function createLeft(){
+          var left = document.createElement("div");
+          left.setAttribute("class","left");
+          body.appendChild(left);
+          left.style.float="left";
+          left.style.display="inline";
+          left.style.width="100px";
+          left.style.fontSize="130%";
+          left.style.textAlign="center";
+//          left.style.position="relative";
+          left.style.marginTop="1vh";
+          left.style.marginRight="0px";
+          left.style.color="white";
+          left.style.fontWeight="800";
+          left.style.textShadow="1px 3px 2px #000000";
+
+          //lvl is part of leftDiv
+
+          var lvl =document.createElement("div");
+          left.appendChild(lvl);
+
+
+
+
+
+
+          lvl.setAttribute("id","lvl");
+
+          lvl.innerHTML="level<br>14";
+
+
+
+          lvl.style.backgroundColor="#8229f5";
+          lvl.style.backgroundImage="url('https://www.transparenttextures.com/patterns/arabesque.png')";
+
+
+
+
+
+          //spd is part of leftDiv
+          var spd = document.createElement("div");
+          left.appendChild(spd);
+          spd.setAttribute("id","spd");
+          spd.innerHTML="SPEED<br>I I I";
+          spd.style.position="relative";
+          spd.style.backgroundColor="#8229f5";
+          spd.style.backgroundImage="url('https://www.transparenttextures.com/patterns/arabesque.png')";
+          spd.style.marginTop="10px";
+
+          var ac = document.createElement("div");
+          left.appendChild(ac);
+          ac.setAttribute("id","ac");
+          ac.innerHTML="AC<br>26";
+          ac.style.position="relative";
+          ac.style.backgroundColor="#8229f5";
+          ac.style.backgroundImage="url('https://www.transparenttextures.com/patterns/arabesque.png')";
+          ac.style.marginTop="15px";
+
+
+          var hp = document.createElement("div");
+          left.appendChild(hp);
+          hp.setAttribute("id","hp");
+          hp.style.float="left";
+          hp.innerHTML="HP<br>100;<br>120<br>(armored)";
+          hp.style.position="relative";
+          hp.style.backgroundColor="#8229f5";
+          hp.style.backgroundImage="url('https://www.transparenttextures.com/patterns/arabesque.png')";
+          hp.style.marginTop="20px";
+
+        }createLeft();
+ //
+        function textContent() {
+          var attackDescription = document.createElement("table");
+          body.appendChild(attackDescription);
+          body.style.margin="0px";
+          attackDescription.style.paddingLeft="90px";
+          attackDescription.style.textAlign="left";
+          attackDescription.style.marginLeft="0px";
+          attackDescription.style.padding="0px";
+          attackDescription.style.textShadow="1px 1px 1px grey";
+          
+          var attTHEAD = document.createElement("thead");
+          attackDescription.appendChild(attTHEAD);
+          
+          var attTHEADr1 = document.createElement("tr");
+          attTHEAD.appendChild(attTHEADr1);
+          attTHEAD.style.display="block";
+          attTHEADr1.innerHTML="<th>MELEE ATTACK:100DMG</th>";
+          
+          var attTHEADr2 = document.createElement("tr");
+          attTHEAD.appendChild(attTHEADr2);
+          attTHEAD.style.display="block";
+          attTHEADr2.innerHTML="<th>RANGE ATTACK=43DMG</th>";
+          
+          
+    
+          var attTBODY = document.createElement("tbody");
+          attackDescription.appendChild(attTBODY);
+          attTBODY.innerHTML="<tr><th>DEFENDER EFFECT</th></tr><tr><td>ADS-MKIV \"Magpie\": <BR/>Active Defensive System<td></tr>"
+          
+          var attTFOOT = document.createElement("tfoot");
+          attackDescription.appendChild(attTFOOT);
+          attTFOOT.innerHTML="<tr><th>SPECIAL ABILITIES</th></tr><tr>Piloting a Helicopter</tr><tr><td>Repairing Machines</td></tr>"
+          attTFOOT.style.clear="both"
+          
+          function createChronology(){
+            var chronology = document.createElement("ul")
+            body.appendChild(chronology);
+            chronology.style.marginLeft="120px";
+            chronology.style.padding="10px";
+            chronology.style.textAlign="left";
+            chronology.style.width="250px";
+            chronology.innerHTML = "<li><b>Chronology</b></li> <li>March 9,1978 - Born in <img src='img/De_hd.png' alt='De' width='20px'>Düsseldorf</li> <li> 1986~1990  - Karlsruhe Institute of Technology: Bachelor of Science, Aerospace Engineering</li> <li>1991 - Joined the Bundespolizei(BPOL) Avation Group</li>"
+          }createChronology()
+        }
+        textContent();
+        
+        
+        
+        function footer() {
+          var footer = document.createElement("footer");
+          body.appendChild(footer);
+          footer.style.backgroundColor="blue";
+          footer.style.height="50px";
+          footer.style.fontSize="150%";
+          footer.style.position="absolute";
+          body.style.textAlign="center";
+          footer.style.width="500px"
+          footer.style.paddingLeft="0px";
+          footer.style.margin="0px";
+          footer.style.top="95%";
+          footer.style.fontFamily = "'Aladin', cursive";
+          footer.style.color="White";
+          footer.style.backgroundImage="url('https://www.transparenttextures.com/patterns/arabesque.png')";
+          footer.style.textShadow="12px 22px 15px grey";
+          footer.innerHTML="DUNGEONS & DRAGONS";
+          
+        }footer();
+      }
+      createAll();
+      
+      
+    </script>
+
+  </body>
+</html>
